@@ -1,0 +1,91 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite; /* Smooth gradient animation */
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+.stopwatch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.stopwatch {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.display {
+    font-size: 4em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #0072ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin: 5px;
+}
+
+.btn:hover {
+    background: #005bb5;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.laps {
+    text-align: left;
+}
+
+.lap-list {
+    list-style: none;
+    padding: 0;
+}
+
+.lap-list li {
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+    font-size: 1.2em;
+    color: #666;
+}
